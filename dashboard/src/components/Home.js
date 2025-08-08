@@ -19,19 +19,19 @@ const Home = () => {
     useEffect(() => {
         const verifyCookie = async () => {
             if (!cookies.token) {
-                window.location.href = "http://localhost:3001/login?message=not-logged-in";
+                window.location.href = "https://trading-platefrom-1-frontend.onrender.com/login?message=not-logged-in";
                 return;
             }
             try {
                 const { data } = await axios.post(
-                    "http://localhost:8000/auth",
+                    "https://trading-platefrom.onrender.com/auth",
                     {},
                     { withCredentials: true }
                 );
                 const { status, user } = data;
                 if (!status) {
                     removeCookie("token");
-                    window.location.href = "http://localhost:3001/login?message=not-logged-in";
+                    window.location.href = "https://trading-platefrom-1-frontend.onrender.com/login?message=not-logged-in";
                 } else {
                     setUsername(user.username);
                     setUserId(user._id);
@@ -42,7 +42,7 @@ const Home = () => {
             } catch (error) {
                 console.error(error);
                 removeCookie("token");
-                window.location.href = "http://localhost:3001/login?message=not-logged-in";
+                window.location.href = "https://trading-platefrom-1-frontend.onrender.com/login?message=not-logged-in";
             }
         };
         verifyCookie();

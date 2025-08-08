@@ -17,7 +17,7 @@ const Menu = ({ username }) => {
 
     const handleLogout = () => {
         removeCookie("token");
-        window.location.href = "http://localhost:3001/login"; // or /login
+        window.location.href = "https://trading-platefrom-1-frontend.onrender.com/login"; // or /login
     };
 
     const menuClass = "menu";

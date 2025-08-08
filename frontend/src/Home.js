@@ -15,7 +15,7 @@ const Home = () => {
                 navigate("/login");
             }
             const { data } = await axios.post(
-                "http://localhost:8000/auth",
+                "https://trading-platefrom.onrender.com/auth",
                 {},
                 { withCredentials: true }
             );

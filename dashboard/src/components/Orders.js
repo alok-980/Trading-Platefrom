@@ -7,7 +7,7 @@ const Orders = ({ userId }) => {
     const [allOrder, setAllOrder] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/allOrders/${userId}`)
+        axios.get(`https://trading-platefrom.onrender.com/allOrders/${userId}`)
             .then((res) => {
                 setAllOrder(res.data);
             }).catch(e => console.log(e));

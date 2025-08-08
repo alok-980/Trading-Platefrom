@@ -10,7 +10,7 @@ const Holdings = ({ userId }) => {
     useEffect(() => {
         if (!userId) return;
 
-        axios.get(`http://localhost:8000/allHoldings/${userId}`)
+        axios.get(`https://trading-platefrom.onrender.com/allHoldings/${userId}`)
             .then((res) => {
                 setAllHoldings(res.data);
             }).catch(e => console.log(e));

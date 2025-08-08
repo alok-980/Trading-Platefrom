@@ -13,7 +13,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
+const allowedOrigins = ["https://trading-platefrom-1-dashboard.onrender.com", "https://trading-platefrom-1-frontend.onrender.com"];
 
 app.use(cors({
     origin: function (origin, callback) {

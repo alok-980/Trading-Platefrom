@@ -33,7 +33,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const { data } = await axios.post(
-                "http://localhost:8000/auth/login",
+                "https://trading-platefrom.onrender.com/auth/login",
                 {
                     ...inputValue,
                 },
@@ -44,7 +44,7 @@ const Login = () => {
             if (success) {
                 handleSuccess(message);
                 setTimeout(() => {
-                    window.location.href = "http://localhost:3000";
+                    window.location.href = "https://trading-platefrom-1-dashboard.onrender.com";
                 }, 1000);
             } else {
                 handleError(message);
